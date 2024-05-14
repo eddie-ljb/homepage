@@ -1,3 +1,0 @@
-[build]
-  command = "mvn clean install"
-  publish = "target/my-spring-boot-app.jar"

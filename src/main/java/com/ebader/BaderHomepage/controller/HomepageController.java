@@ -15,7 +15,31 @@ public class HomepageController {
 	@GetMapping(value = "/")
 	public ModelAndView showHomepage(Model model) {
 		model.addAttribute("appName", appName);
-		return new ModelAndView("homepage.html");
+		return new ModelAndView("index.html");
+	}
+	
+	@GetMapping(value = "/contact")
+	public ModelAndView showContactPage(Model model) {
+		model.addAttribute("appName", appName);
+		return new ModelAndView("contact.html");
+	}
+	
+	@GetMapping(value = "/projects")
+	public ModelAndView showProjectsPage(Model model) {
+		model.addAttribute("appName", appName);
+		return new ModelAndView("projects.html");
+	}
+	
+	@GetMapping(value = "/resumee")
+	public ModelAndView showResumeePage(Model model) {
+		model.addAttribute("appName", appName);
+		return new ModelAndView("resume.html");
+	}
+	
+	@GetMapping(value = "/impressum")
+	public ModelAndView showImpressumPage(Model model) {
+		model.addAttribute("appName", appName);
+		return new ModelAndView("impressum.html");
 	}
 
 }

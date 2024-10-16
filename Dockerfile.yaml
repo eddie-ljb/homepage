@@ -1,0 +1,15 @@
+version: '3.8'  # Definiert die Version von docker-compose
+
+services:
+  bader-homepage:  # Name des Containers/Services
+    build:
+      context: .  # Pfad zu dem Verzeichnis, das die Dockerfile enthält
+      dockerfile: Dockerfile  # Name der Dockerfile (optional, wenn sie 'Dockerfile' heißt)
+    volumes:
+      - /tmp  # Definiert das Volume, wie es in der Dockerfile verwendet wird
+    environment:
+      - JAR_FILE=BaderHomepage-0.0.1-SNAPSHOT.jar  # Setzt den JAR_FILE-ARG für den Build
+    ports:
+      - "8080:8080"  # Mapping von Host-Port 8080 auf den Container-Port 8080 (falls die App dort läuft)
+    command: ["java", "-jar", "/BaderHomepage-0.0.1-SNAPSHOT.jar"]  # Start-Befehl
+

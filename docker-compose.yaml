@@ -5,4 +5,6 @@ services:
       dockerfile: Dockerfile  # Der Name deiner Dockerfile (hier z.B. Dockerfile.yaml)
     environment:
       - JAR_FILE=BaderHomepage-0.0.1-SNAPSHOT.jar
+    ports:
+      - "80:80"  # Passe den Port an, falls nötig
     command: ["java", "-jar", "/BaderHomepage-0.0.1-SNAPSHOT.jar"]

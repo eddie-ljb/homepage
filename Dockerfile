@@ -2,7 +2,7 @@ services:
   bader-homepage:
     build:
       context: .  # Dies ist das Verzeichnis, in dem sich die Dockerfile befinden sollte
-      dockerfile: Dockerfile.yaml  # Name der Dockerfile (normalerweise 'Dockerfile', kannst du anpassen)
+      dockerfile: Dockerfile  # Name der Dockerfile (normalerweise 'Dockerfile', kannst du anpassen)
     volumes:
       - /tmp  # Definiertes Volume
     environment:

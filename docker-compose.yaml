@@ -17,5 +17,3 @@ services:
     working_dir: /app
     command: ["sh", "-c", "./mvnw spring-boot:run"]  # Verwenden von 'sh' um sicherzustellen, dass das Skript korrekt ausgeführt wird
 
-volumes:
-  mysql_data:

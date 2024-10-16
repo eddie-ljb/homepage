@@ -1,0 +1,12 @@
+services:
+  bader-homepage:
+    build:
+      context: .  # Das aktuelle Verzeichnis, in dem sich die Dockerfile befindet
+      dockerfile: Dockerfile  # Der Name der Dockerfile (du kannst ihn anpassen, falls nötig)
+    volumes:
+      - /tmp  # Entspricht dem VOLUME-Befehl in der Dockerfile
+    environment:
+      - JAR_FILE=BaderHomepage-0.0.1-SNAPSHOT.jar  # Übergabe des ARGs an die Dockerfile, falls benötigt
+    ports:
+      - "8080:8080"  # Expose und mappe den Port, wenn die Anwendung auf Port 8080 läuft
+    command: ["java", "-jar", "/BaderHomepage-0.0.1-SNAPSHOT.jar"]  # Der Startbefehl

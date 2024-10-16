@@ -2,7 +2,6 @@ services:
   bader-homepage:
     build:
       context: .  # Das aktuelle Verzeichnis, in dem sich die Dockerfile befindet
-      dockerfile: Dockerfile  # Der Name der Dockerfile (du kannst ihn anpassen, falls nötig)
     volumes:
       - /tmp  # Entspricht dem VOLUME-Befehl in der Dockerfile
     environment:

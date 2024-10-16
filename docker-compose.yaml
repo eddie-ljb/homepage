@@ -1,19 +1,6 @@
-version: "3"
-services:
-  database:
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: springpassword
-      MYSQL_DATABASE: springdb
-      MYSQL_USER: springuser
-      MYSQL_PASSWORD: springpassword
-    volumes:
-      - mysql_data:/var/lib/mysql
 
+services:
   springboot-app:
-    depends_on:
-      - database
     image: openjdk:17-jdk-slim
     restart: always
     ports:

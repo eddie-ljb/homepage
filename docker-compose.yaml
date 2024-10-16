@@ -6,5 +6,5 @@ services:
     environment:
       - JAR_FILE=BaderHomepage-0.0.1-SNAPSHOT.jar
     ports:
-      - "80:80"  # Passe den Port an, falls nötig
+      - "8080:8080"  # Passe den Port an, falls nötig
     command: ["java", "-jar", "/BaderHomepage-0.0.1-SNAPSHOT.jar"]

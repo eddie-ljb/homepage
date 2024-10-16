@@ -1,8 +1,8 @@
 services:
   bader-homepage:
     build:
-      context: .  # Das Verzeichnis, in dem sich die Dockerfile befindet
-      dockerfile: Dockerfile.txt  # Der Name deiner Dockerfile (hier z.B. Dockerfile.yaml)
+      context: ./homepage  # Das Verzeichnis, in dem sich die Dockerfile befindet
+      dockerfile: Dockerfile  # Der Name deiner Dockerfile (hier z.B. Dockerfile.yaml)
     volumes:
       - /tmp
     environment:
